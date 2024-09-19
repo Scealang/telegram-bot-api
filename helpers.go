@@ -141,7 +141,7 @@ func NewTopicDocument(chatID int64, topicID int, file RequestFileData) DocumentC
 		BaseFile: BaseFile{
 			BaseChat: BaseChat{
 				ChatID: chatID,
-				ThreadID: topicID
+				ThreadID: topicID,
 			},
 			File:     file,
 		},
