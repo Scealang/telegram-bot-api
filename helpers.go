@@ -135,6 +135,19 @@ func NewDocument(chatID int64, file RequestFileData) DocumentConfig {
 	}
 }
 
+// NewDocument creates a new sendDocument request.
+func NewTopicDocument(chatID int64, topicID int, file RequestFileData) DocumentConfig {
+	return DocumentConfig{
+		BaseFile: BaseFile{
+			BaseChat: BaseChat{
+				ChatID: chatID,
+				ThreadID: topicID
+			},
+			File:     file,
+		},
+	}
+}
+
 // NewSticker creates a new sendSticker request.
 func NewSticker(chatID int64, file RequestFileData) StickerConfig {
 	return StickerConfig{
